@@ -5,7 +5,7 @@ import './Banner.css';
 class Banner extends Component{ 
     render(){ 
         return(
-            <div classname="Banner">
+            <div className="Banner">
                 <p>{this.props.texto}</p>
              </div>
         );
