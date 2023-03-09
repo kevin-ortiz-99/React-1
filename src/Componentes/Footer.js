@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Footer.css';
 
-class Footer extends Component { 
-    render(){ 
-        return(
-            <div>
-                 <p>{this.prop.children}</p>
+class Footer extends Component {
+    render() {
+        return (
+            <div >
+                <p>{this.props.children}</p>
+                
             </div>
         );
     }
@@ -14,7 +14,7 @@ class Footer extends Component {
 
 export default Footer;
 
-Footer.prototype ={ 
-    children:PropTypes.string
+Footer.protoType = {
+    children: PropTypes.string
 }
 
