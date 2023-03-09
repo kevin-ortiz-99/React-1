@@ -1,28 +1,30 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Body.css';
 
-class Body extends Component{ 
-    render(){ 
-    const {arreglo} = this.props;
-    const {text}= this.props;
+class Body extends Component {
 
-        return(
-             <div>
-                <p>{text}</p>
-                { arreglo.map((p,index)=>(
-                    <h2 key={index}>Elemento {p}</h2>
-                ))}
+    render() {
+        const { arreglo } = this.props;
+        const { text } = this.props;
 
-                
-            </div>
+        return (
+            <div >
+                <p className="Body1">{text}</p>
+                {arreglo.map((p, index) => (
+                    <h1 className="Body1" key={index}>Elemento {p}</h1>
+
+                ))}                
+
+                <button onClick={() => alert("Bienvenido Galgo")}>NO PRESIONAR!</button>
+             </div>
         );
     }
 }
 
 export default Body;
 
-Body.propTypes={ 
-    text:PropTypes.string,
-    arreglo:PropTypes.array
+Body.propTypes = {
+    text: PropTypes.string,
+    arreglo: PropTypes.array
 }
